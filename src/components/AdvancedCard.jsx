@@ -9,7 +9,7 @@ const AdvancedCard = ({
   customClass,
 }) => {
   return (
-    <div className={`card ${customClass} h-100`}>
+    <div className={`card shadow border-radius-lg ${customClass} h-100`}>
       <div className="card-body p-3">
         <div className="row">
           <div className={imgSrc ? "col-lg-6" : "col-lg-12"}>

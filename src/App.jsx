@@ -1,21 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import "./App.css";
+import { useState } from "react";
 
 import Sidebar from "./components/Sidebar";
+import NavigationBar from "./components/NavigationBar";
+
+import Dashboard from "./pages/Dashboard";
+import Table from "./pages/Table";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import Dashboard from "./pages/Dashboard";
-import Table from "./pages/Table";
-import NavigationBar from "./components/NavigationBar";
-import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [showSidebar, setSidebar] = useState(false);
+  const [hideSidebar, setSidebar] = useState(true);
   const sidebarHandler = () => {
-    setSidebar(!showSidebar);
+    setSidebar(!hideSidebar);
   };
 
   return (
@@ -23,13 +23,15 @@ function App() {
       <div className="container-fluid py-4">
         <BrowserRouter>
           <div
-            className={`sidebar-main ps ${showSidebar ? "showSidebar" : ""}`}
+            className={`sidebar-main ps ${
+              hideSidebar ? "hideSidebar" : "my-3 ms-2 border-radius-xl"
+            }`}
           >
-            <Sidebar />
+            <Sidebar onClickHandler={sidebarHandler} />
           </div>
           <div className="main-content ps-2 pe-2">
             {/* TODO: Add dynamic NavigationBar tag */}
-            <NavigationBar sidebarHandler={sidebarHandler} tag="Dashboard" />
+            <NavigationBar onClickHandler={sidebarHandler} tag="Dashboard" />
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/pages/dashboard" element={<Dashboard />} />

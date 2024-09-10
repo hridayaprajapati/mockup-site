@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const NavigationBar = ({ tag, sidebarHandler }) => {
+const NavigationBar = ({ tag, onClickHandler }) => {
   return (
     <div className="d-flex flex-wrap justify-content-between align-items-center container-fluid py-1 px-3">
       <nav aria-label="breadcrumb">
@@ -44,16 +44,17 @@ const NavigationBar = ({ tag, sidebarHandler }) => {
               <FaUser />
             </Link>
           </li>
-          <li className="nav-item d-flex align-items-center">
-            <button
+          <li className="nav-item d-flex flex-column align-self-center">
+            <Link
+              to="#!"
               id="sidebarToggler"
-              onClick={sidebarHandler}
+              onClick={onClickHandler}
               className="nav-link text-body p-0"
             >
               <FaBars />
-            </button>
+            </Link>
           </li>
-          <li className="nav-item d-flex align-items-center">
+          <li className="nav-item">
             <Link to="#!" className="nav-link">
               <FaGear />
             </Link>

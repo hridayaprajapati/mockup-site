@@ -1,6 +1,7 @@
+import { FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ onClickHandler }) => {
   const navLinkItems = [
     {
       idx: 1,
@@ -47,7 +48,7 @@ const Sidebar = () => {
   return (
     <>
       <aside className="fixed-start">
-        <div className="sidenav-header">
+        <div className="sidenav-header d-flex py-2 pe-3">
           <Link className="navbar-brand" to="/pages/dashboard" target="_blank">
             <img
               src="/logo-ct-dark.webp"
@@ -56,6 +57,9 @@ const Sidebar = () => {
             />
             <span className="ms-1 fw-bold">Soft UI Dashboard</span>
           </Link>
+          <div onClick={onClickHandler} className="xmark cursor-pointer">
+            <FaXmark />
+          </div>
         </div>
         <hr className="horizontal-divider mx-5" />
         <nav className="navbar-nav">

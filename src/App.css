@@ -1,6 +1,8 @@
 :root {
   --bs-navbar-active-color: #344767;
-  --bs-card-box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+  --bs-border-color-translucent: 0;
+  --bs-card-border-radius: 1rem;
+  --bs-card-inner-border-radius: 1rem;
 }
 
 .icon {
@@ -19,10 +21,10 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 15.625rem;
-  overflow-y: auto;
   left: 0;
   padding: 0;
+  width: 15.625rem;
+  overflow-y: auto;
   background-color: white;
   z-index: 1000;
   transition: all ease 0.3s;
@@ -46,19 +48,30 @@
     margin-left: 0;
   }
 
-  .showSidebar {
+  .hideSidebar {
     border-radius: 24px;
-    left: -260px;
+    left: -300px;
     transition: all ease 0.3s;
   }
 
-  .sidebar-main.showSidebar {
+  .sidebar-main.hideSidebar {
     box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+    background-color: white;
+  }
+  span.input-group-text.text-body {
+    display: none;
+  }
+
+  input.form-control {
+    text-align: center;
+    border-radius: 2rem;
+    border-top-left-radius: 2rem !important;
+    border-bottom-left-radius: 2rem !important;
   }
 }
 
 @media screen and (min-width: 1281px) {
-  .sidebar-main.showSidebar {
+  .sidebar-main.hideSidebar {
     transform: translateX(0);
   }
 
@@ -66,7 +79,11 @@
     margin-left: 15.625rem;
   }
 
-  .sidebar-main.showSidebar {
+  .xmark {
+    display: none;
+  }
+
+  .sidebar-main.hideSidebar {
     background-color: #f8f9fa;
     box-shadow: 0;
   }
@@ -127,8 +144,8 @@
   color: #67748e;
 }
 
-.card {
-  box-shadow: var(--bs-card-box-shadow);
+.border-radius-lg {
+  border-radius: var(--bs-card-border-radius);
 }
 
 .card,
@@ -164,4 +181,16 @@
 
 .icon svg {
   color: white;
+}
+
+.border-radius-xl {
+  border-radius: 2rem;
+}
+
+li.nav-item .nav-link {
+  margin: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
