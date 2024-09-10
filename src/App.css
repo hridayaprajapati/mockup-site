@@ -25,7 +25,6 @@
   padding: 0;
   width: 15.625rem;
   overflow-y: auto;
-  background-color: white;
   z-index: 1000;
   transition: all ease 0.3s;
 }
@@ -58,6 +57,15 @@
     box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
     background-color: white;
   }
+
+  .sidebar-main {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    background-color: white;
+  }
+
   span.input-group-text.text-body {
     display: none;
   }
@@ -181,10 +189,6 @@
 
 .icon svg {
   color: white;
-}
-
-.border-radius-xl {
-  border-radius: 2rem;
 }
 
 li.nav-item .nav-link {
