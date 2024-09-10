@@ -66,7 +66,11 @@ const Sidebar = ({ onClickHandler }) => {
           <ul className="nav-list list-unstyled">
             {navLinkItems.map((item) => (
               <li key={item.idx} className="nav-item">
-                <Link to={item.linkTo} className="nav-link">
+                <Link
+                  to={item.linkTo}
+                  onClick={onClickHandler}
+                  className="nav-link mouse-pointer"
+                >
                   <div className="icon"></div>
                   {item.title}
                 </Link>
