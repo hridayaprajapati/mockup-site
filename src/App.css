@@ -1,5 +1,6 @@
 :root {
   --bs-navbar-active-color: #344767;
+  --bs-card-box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
 }
 
 .icon {
@@ -22,9 +23,9 @@
   overflow-y: auto;
   left: 0;
   padding: 0;
-  transform: translateX(0);
+  background-color: white;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
+  transition: all ease 0.3s;
 }
 
 .main-content {
@@ -37,10 +38,6 @@
 }
 
 @media screen and (max-width: 1280px) {
-  .sidebar-main {
-    transform: translateX(-100%);
-  }
-
   .navbar-nav #sidebarToggler {
     display: block;
   }
@@ -50,11 +47,9 @@
   }
 
   .showSidebar {
-    background-color: white;
-    padding: 2rem 0;
-    margin-left: 17.5rem;
     border-radius: 24px;
-    transition: all 0.3s ease-in-out;
+    left: -260px;
+    transition: all ease 0.3s;
   }
 
   .sidebar-main.showSidebar {
@@ -130,6 +125,10 @@
   white-space: nowrap;
   font-weight: 500;
   color: #67748e;
+}
+
+.card {
+  box-shadow: var(--bs-card-box-shadow);
 }
 
 .card,

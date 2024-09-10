@@ -57,7 +57,7 @@ const Sidebar = () => {
             <span className="ms-1 fw-bold">Soft UI Dashboard</span>
           </Link>
         </div>
-        <hr className="horizontal-divider" />
+        <hr className="horizontal-divider mx-5" />
         <nav className="navbar-nav">
           <ul className="nav-list list-unstyled">
             {navLinkItems.map((item) => (

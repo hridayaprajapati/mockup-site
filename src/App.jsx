@@ -23,11 +23,7 @@ function App() {
       <div className="container-fluid py-4">
         <BrowserRouter>
           <div
-            className={
-              showSidebar
-                ? "sidebar-main ps showSidebar my-3"
-                : "sidebar-main ps"
-            }
+            className={`sidebar-main ps ${showSidebar ? "showSidebar" : ""}`}
           >
             <Sidebar />
           </div>
