@@ -13,7 +13,7 @@ import NavigationBar from "./components/NavigationBar";
 import { useState } from "react";
 
 function App() {
-  const [showSidebar, setSidebar] = useState(true);
+  const [showSidebar, setSidebar] = useState(false);
   const sidebarHandler = () => {
     setSidebar(!showSidebar);
   };
@@ -24,7 +24,9 @@ function App() {
         <BrowserRouter>
           <div
             className={
-              showSidebar ? "sidebar-main ps showSidebar" : "sidebar-main ps"
+              showSidebar
+                ? "sidebar-main ps showSidebar my-3"
+                : "sidebar-main ps"
             }
           >
             <Sidebar />

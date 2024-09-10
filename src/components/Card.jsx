@@ -14,21 +14,21 @@ const Card = ({
           <div className="col-8">
             <div className="numbers">
               <p className="small mb-0 text-capitalize fw-bold">{title}</p>
-              <h5 className="fw-bold mb-0">
+              <h5 className="fw-bold mb-0 d-flex flex-row flex-wrap align-items-center gap-2">
                 {description}
-                <span
+                <div
                   id="status"
-                  className="difference small m-0 text-capitalize fw-bold"
+                  className="small m-0 text-capitalize fw-bold"
                   style={{ color: differenceColor }}
                 >
                   {difference}
-                </span>
+                </div>
               </h5>
             </div>
           </div>
           <div className="col-4 text-end">
             <div className="icon bg-gradient-primary card-image rounded-2">
-              <i>{IconComponent && <IconComponent />}</i>
+              <i>{<IconComponent />}</i>
             </div>
           </div>
         </div>

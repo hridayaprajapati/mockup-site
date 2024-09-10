@@ -34,7 +34,7 @@ const NavigationBar = ({ tag, sidebarHandler }) => {
           />
         </div>
 
-        <Link to="#!" className="btn btn-outline-primary btn-sm mb-0 me-3">
+        <Link to="#!" className="btn btn-outline-primary btn-sm w-50 mb-0 me-3">
           ONLINE BUILDER
         </Link>
 
@@ -42,7 +42,6 @@ const NavigationBar = ({ tag, sidebarHandler }) => {
           <li className="nav-item">
             <Link to="#!" className="nav-link">
               <FaUser />
-              <span>Sign In</span>
             </Link>
           </li>
           <li className="nav-item d-flex align-items-center">
