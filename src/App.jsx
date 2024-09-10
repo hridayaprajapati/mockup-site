@@ -32,6 +32,7 @@ function App() {
             <Sidebar />
           </div>
           <div className="main-content ps-2 pe-2">
+            {/* TODO: Add dynamic NavigationBar tag */}
             <NavigationBar sidebarHandler={sidebarHandler} tag="Dashboard" />
             <Routes>
               <Route path="/" element={<Dashboard />} />

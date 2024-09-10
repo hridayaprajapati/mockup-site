@@ -1,6 +1,49 @@
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const navLinkItems = [
+    {
+      idx: 1,
+      title: "Dashboard",
+      linkTo: "/pages/dashboard",
+    },
+    {
+      idx: 2,
+      title: "Tables",
+      linkTo: "/pages/table",
+    },
+    {
+      idx: 3,
+      title: "Billing",
+      linkTo: "#!",
+    },
+    {
+      idx: 4,
+      title: "Virtual Reality",
+      linkTo: "#!",
+    },
+    {
+      idx: 5,
+      title: "RTL",
+      linkTo: "#!",
+    },
+  ];
+
+  const accountItems = [
+    {
+      title: "Profile",
+      linkTo: "#!",
+    },
+    {
+      title: "Sign In",
+      linkTo: "#!",
+    },
+    {
+      title: "Sign Up",
+      linkTo: "#!",
+    },
+  ];
+
   return (
     <>
       <aside className="fixed-start">
@@ -17,59 +60,27 @@ const Sidebar = () => {
         <hr className="horizontal-divider" />
         <nav className="navbar-nav">
           <ul className="nav-list list-unstyled">
-            <li className="nav-item">
-              <Link to="/pages/dashboard" className="nav-link">
-                <div className="icon"></div>
-                Dashboard
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/pages/table" className="nav-link">
-                <div className="icon"></div>
-                Tables
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                Billing
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                Virtual Reality
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                RTL
-              </Link>
-            </li>
+            {navLinkItems.map((item) => (
+              <li key={item.idx} className="nav-item">
+                <Link to={item.linkTo} className="nav-link">
+                  <div className="icon"></div>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
             <li className="nav-item mt-3">
-              <h6 className="section-header ps-4 ms-2 text-uppercase text-xs fw-bold ">
+              <h6 className="section-header ps-4 ms-2 text-uppercase text-xs fw-bold">
                 Account Pages
               </h6>
             </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                Profile
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                Sign In
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="#!" className="nav-link">
-                <div className="icon"></div>
-                Sign Up
-              </Link>
-            </li>
+            {accountItems.map((item, index) => (
+              <li key={index} className="nav-item">
+                <Link to={item.linkTo} className="nav-link">
+                  <div className="icon"></div>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </aside>
