@@ -1,0 +1,7 @@
+.card-with-bg {
+  background-image: url(../../images/ivancik.jpg);
+}
+
+.bg-cover {
+  background-size: cover !important;
+}

@@ -1,0 +1,33 @@
+.icon {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  text-align: center;
+}
+
+.icon svg {
+  color: white;
+}
+
+.navbar-brand {
+  display: block;
+}
+
+.navbar-brand > img {
+  max-width: 100%;
+  max-height: 2rem;
+}
+
+.sidenav {
+  z-index: 1030;
+  margin: 1rem !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidenav-header {
+  height: 4.875rem;
+}
+
+.sidenav-header .navbar-brand {
+  padding: 1.5rem 2rem;
+}
