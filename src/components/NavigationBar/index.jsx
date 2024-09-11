@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const NavigationBar = ({ tag, onClickHandler }) => {
   return (
-    <div className="d-flex flex-wrap justify-content-between align-items-center container-fluid py-1 px-3">
+    <div className="container-fluid py-1 px-3 d-flex flex-wrap justify-content-between align-items-center">
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
@@ -34,7 +34,7 @@ const NavigationBar = ({ tag, onClickHandler }) => {
           />
         </div>
 
-        <Link to="#!" className="btn btn-outline-primary btn-sm w-50 mb-0 me-3">
+        <Link to="#!" className="btn btn-outline-primary btn-sm w-100 mb-0">
           ONLINE BUILDER
         </Link>
 

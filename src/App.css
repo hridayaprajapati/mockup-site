@@ -1,8 +1,6 @@
 :root {
   --bs-navbar-active-color: #344767;
   --bs-border-color-translucent: 0;
-  --bs-card-border-radius: 1rem;
-  --bs-card-inner-border-radius: 1rem;
 }
 
 .sidebar-main {
@@ -20,10 +18,6 @@
 .main-content {
   margin-left: 20rem;
   transition: margin-left 0.3s ease-in-out;
-}
-
-.navbar {
-  color: #344767;
 }
 
 .navbar-nav > .nav-item {
@@ -68,10 +62,6 @@ li.nav-item .nav-link {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.border-radius-lg {
-  border-radius: var(--bs-card-border-radius);
 }
 
 .card,

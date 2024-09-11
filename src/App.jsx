@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Sidebar from "./components/Sidebar";
@@ -21,16 +21,11 @@ function App() {
   return (
     <>
       <div className="container-fluid py-4">
-        <BrowserRouter>
-          <div
-            className={`sidebar-main ps ${
-              hideSidebar ? "hideSidebar" : "my-3 ms-2 border-radius-xl"
-            }`}
-          >
+        <Router>
+          <div className={`sidebar-main ${hideSidebar ? "hideSidebar" : ""}`}>
             <Sidebar onClickHandler={sidebarHandler} />
           </div>
           <div className="main-content ps-2 pe-2">
-            {/* TODO: Add dynamic NavigationBar tag */}
             <NavigationBar onClickHandler={sidebarHandler} tag="Dashboard" />
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -38,7 +33,7 @@ function App() {
               <Route path="/pages/table" element={<Table />} />
             </Routes>
           </div>
-        </BrowserRouter>
+        </Router>
       </div>
     </>
   );

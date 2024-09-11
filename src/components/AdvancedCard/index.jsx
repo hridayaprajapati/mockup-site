@@ -6,10 +6,10 @@ const AdvancedCard = ({
   description,
   imgSrc,
   imgAltName,
-  customClass,
+  customClass = "",
 }) => {
   return (
-    <div className={`card shadow border-radius-lg ${customClass} h-100`}>
+    <div className={`card shadow rounded-4 h-100 ${customClass}`}>
       <div className="card-body p-3">
         <div className="row">
           <div className={imgSrc ? "col-lg-6" : "col-lg-12"}>
@@ -23,14 +23,9 @@ const AdvancedCard = ({
             </div>
           </div>
           {imgSrc && (
-            <div className="col-lg-5 ms-auto mt-5 mt-lg-0 h-100">
-              <div className="bg-gradient-primary border-radius-lg position-relative h-100">
-                <img
-                  src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/shapes/waves-white.svg"
-                  className="position-absolute  w-50 top-0 d-lg-block d-none"
-                  alt="waves"
-                />
-                <div className="d-flex align-items-center justify-content-center h-100">
+            <div className="col-lg-5 ms-auto d-flex flex-column justify-content-center">
+              <div className="bg-gradient-primary h-100 rounded-4">
+                <div className="rounded-4">
                   <img
                     src={imgSrc}
                     alt={imgAltName}
